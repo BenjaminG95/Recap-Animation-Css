@@ -1,0 +1,59 @@
+.carte{
+  cursor: pointor; 
+  width: 15em;
+  height: 25em;
+  position: absolute; /* je retire la carte du flux */
+  top: 50%; /* cette ligne et les deux suivante servent a centrer mon element */
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.front, .back{
+   /* j'indique que la face qui n'est pas visible doit être caché afin qu'elle ressorte avec un display: none et qu'elle
+  ne pose pas de problèmes */
+  backface-visibility: hidden; 
+
+  width: 100%; /* mes parties avant et arrière prennent 100% de la largeur de la carte */
+  height: 100%; /* mes parties avant et arrière prennent 100% de la hauteur de la carte */
+  
+
+  position: absolute;  /* en retirant la partie avant et la partie arrière du flux, je les superpose */
+  transition: transform 0.5s linear;
+ 
+}
+
+.front img{
+  height: 100%;
+  width: 100%;
+
+}
+
+.front {
+  transform: perspective(600px) rotateY(0deg); /* perspective est la c'est la distance qu'il y a entre l'élément et l'écran de l'utilisateur,
+  ce qui nous permet d'avoir un effet correct lorsque la carte va tourner.
+  Changez la valeur afin de bien comprendre la méchanique. */
+}
+
+.back {
+  background-color: #fff;
+
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.content{
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+
+.carte:hover .front {
+  transform: perspective(600px) rotateY(-180deg)
+}
+
+.carte:hover .back {
+  transform: perspective(600px) rotateY(0deg)
+}
+
+h2{
+color: black;
+}
