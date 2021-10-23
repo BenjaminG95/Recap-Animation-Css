@@ -1,0 +1,47 @@
+/* 1- cacher l'input de base 
+   je récupére tous les input qui ont comme type checkbox */
+
+   input[type=checkbox]{
+  display:none;
+}
+
+/* 2- Je donne le style souhaité à mon label, qui pour mon cas sera le fond de mon bouton */
+
+#toggleButton{
+  display: block;  /* je change mon élément en block à la place de inline */
+  cursor: pointer; /* je rend mon élément cliquable */
+  border-radius: 2em; /* j'arrondis ses angles */
+  width: 5em;  
+  height: 2.5em;
+  background: lightgray;
+  margin: 10em auto 0 auto;
+  transition: all .4s ease-out; /* voir la page css transition pour plus d'info */ 
+}
+
+/* 3- Je crée le bouton */
+
+#toggleButton::after{
+  content: ''; /* Je suis obligé de renseigner un content, même s'il est null. */
+  background-color: lightslategrey; 
+  display: block; /* je change mon élément en block à la place de inline */
+  position: relative; /* je donne une position relative qui me permettra de le positionner avec les propriétés top et lefet */
+  top: .25em; /* je le positionne en partant du haut */
+  left: .25em; /* je le positionne en partant de la gauche */
+  width: 2em;
+  height: 2em;
+  border-radius: 50%; /* je lui donne une apparance ronde */
+  transition: all .4s ease-out;
+}
+
+/* 4- Je change le fond de mon bouton QUAND la checkbox est checké*/
+
+#toggle:checked + #toggleButton {
+  background-color: lightgreen;
+  position: relative;
+}
+
+/* 5- Je déplace mon bouton vers la droite avec translate QUAND la checkbox est checké */
+
+#toggle:checked + #toggleButton::after{
+  transform: translate(2.5em, 0)
+}
