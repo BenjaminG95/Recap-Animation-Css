@@ -1,28 +1,39 @@
-.carte{
+.box{
   cursor: pointor; 
   width: 15em;
   height: 25em;
   position: absolute; /* je retire la carte du flux */
-  top: 50%; /* cette ligne et les deux suivante servent a centrer mon element */
+  top: 75%; /* cette ligne et les deux suivante servent a centrer mon element */
   left: 50%;
   transform: translate(-50%, -50%)
 }
-
-.front, .back{
-   /* j'indique que la face qui n'est pas visible doit être caché afin qu'elle ressorte avec un display: none et qu'elle
-  ne pose pas de problèmes */
-  backface-visibility: hidden; 
-
-  width: 100%; /* mes parties avant et arrière prennent 100% de la largeur de la carte */
-  height: 100%; /* mes parties avant et arrière prennent 100% de la hauteur de la carte */
-  
-
-  position: absolute;  /* en retirant la partie avant et la partie arrière du flux, je les superpose */
-  transition: transform 0.5s linear;
- 
+.carte{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.9s; /* voir la partie transition pour plus d'infos */
+  transform-style: preserve-3d; /* La propriété transform-style définit si les éléments-fils d'un éléments sont positionnés dans l'espace tridimensionnel ou
+  s'ils sont aplatis dans le plan de l'élément. */
+  box-shadow: 0 0 20px 6px black; /* j'ajoute un effet d'ombre a ma carte */
 }
 
-.front img{
+.box:hover .carte{
+  transform: rotateY(180deg); /* au passage de la souris, la carte fera une rotation Y de 180deg */
+}
+
+.front, .back{
+
+  position: absolute; 
+  width: 100%;
+  height: 100%;
+     /* j'indique que la face qui n'est pas visible doit être caché afin qu'elle ressorte avec un display: none et qu'elle
+  ne pose pas de problèmes */
+  backface-visibility: hidden;
+  
+}
+
+/* je redimensionne mon image */
+.front img{ 
   height: 100%;
   width: 100%;
 
@@ -36,9 +47,9 @@
 
 .back {
   background-color: #fff;
-
   transform: perspective(600px) rotateY(180deg);
 }
+
 
 .content{
   color: black;
@@ -46,14 +57,7 @@
   width: 100%;
 }
 
-.carte:hover .front {
-  transform: perspective(600px) rotateY(-180deg)
+.titleFlipcard{
+  color: black;
 }
 
-.carte:hover .back {
-  transform: perspective(600px) rotateY(0deg)
-}
-
-h2{
-color: black;
-}
