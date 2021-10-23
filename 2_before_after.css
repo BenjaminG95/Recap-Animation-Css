@@ -1,0 +1,42 @@
+.beforeAfter {
+  font-size: 45px;
+  font-family: sans-serif;
+  text-align: center;
+  color: black;
+}
+
+/* ::before crée un pseudo-élément qui sera le premier enfant de l'élément ciblé. Généralement utilisé pour ajouter du
+ contenu esthétique à un élément via la propriété CSS content. Par défaut, l'élément créé est de type en-ligne (inline).
+ 
+ voir : https://developer.mozilla.org/fr/docs/Web/CSS/::before */ 
+ 
+.beforeAfter::before{
+  content: 'Before';
+  background: red;
+  display: block;
+  height: 3em;
+  width: 3em;
+  margin-right: auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* :after **crée un pseudo-élément qui sera le dernier enfant de l'élément sélectionné. Il est souvent utilisé pour
+ ajouter du contenu cosmétique à un élément, en utilisant la propriété CSS content. Par défaut, ce contenu est de type
+  « en ligne ».
+
+voir : https://developer.mozilla.org/fr/docs/Web/CSS/::after */
+
+.beforeAfter::after{
+  content: 'After';
+  background: red;
+  display: block;
+  height: 3em;
+  width: 3em;
+  margin-left: auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation CSS</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="1_pseudo_classes.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="body">
+
+    <header>
+        <h1>Animation CSS</h1>
+        <h2 class="h2">Les pseudo-classes</h2>
+        <nav class="nav">
+            <a href="1_Pseudo-classes.html" class="link">Les pseudo-classes</a>
+            <a href="2_beforeAfter.html" class="link">Before & After</a>
+            <a href="3_Proprietes.html" class="link">Propriétés</a>
+            <a href="4_Transition.html" class="link">Transition</a>
+            <a href="5_Animation.html" class="link">Animation</a>
+        </nav>
+
+
+
+        <hr>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Survol -->
+            <h3>Hover :</h3>
+            <div id="hov" class="card">
+                <div class="card-body">
+                    <p class="card-text"> hover : survole moi avec ta souris !</p>
+                </div>
+            </div>
+
+            <!-- Focus élément spécial qui reçoit le focus en cliquant avec la souris
+        ou en le selectionnant avec une touche (tab) -->
+            <h3>Focus :</h3>
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text"> Focus : clique à l'intérieur de l'input</p>
+                    <input id="foc" type="text">
+                </div>
+            </div>
+
+            <!-- Active, quand on clique sur un élément -->
+            <h3>Active :</h3>
+            <div id="act" class="card">
+                <div class="card-body">
+                    <p class="card-text">Active : clique sur moi !</p>
+                </div>
+            </div>
+
+            <!-- Nth-child, pour cibler un enfant en particulier -->
+            <h3>Nth-child :</h3>
+            <div class="card">
+                <div class="card-body">
+                    <ul id="nth">
+                        <li>H</li>
+                        <li>E</li>
+                        <li>L</li>
+                        <li>L</li>
+                        <li>O</li>
+                        <li>W</li>
+                        <li>O</li>
+                        <li>R</li>
+                        <li>L</li>
+                        <li>D</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+
+</body>
+
+</html>

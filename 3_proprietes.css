@@ -1,0 +1,35 @@
+
+
+#colors {
+  background: rgb(201, 131, 131);
+  /* 
+      - la propriété red green blue:
+        rgb(red, green, blue); 
+        rgb(201, 131, 131);
+
+      - la propriété red green blue Alpha qui permet de gérer l'opacité en ajoutant un 4eme argument qui va de 0 à 1
+        1 étant 100% d'opacité et 0 étant 0%:
+        rgb(red, green, blue); 
+        rgb(201, 131, 131, 0.5); donnera un une couleur avec une opacité de 50%
+
+      - La propriété hue saturation lightness:
+        hsl(hue, saturation, lightness);
+        hsl(360, 39%, 65%);
+        
+      - La propriété hexadécimal qui fonctionne avec un code unique pour chaque couleur
+        #c98383
+
+  */
+}
+
+#circle {
+  width: 15em;
+  height: 15em;
+  background:  rgb(201, 131, 131);
+  border-radius: 50%; /* border radius permet d'arrondir les bord d'un élément, en méttant 50% sur un élément carré j'obtiendrais un rond */ 
+  transform: scale(1); /* scale permet de modifier la taille, 1 étant 100%, en ayant mis 2 mon élément aura 2x sa taille initial */
+ /* transform: translate(5em, 5em);  translate permet de déplacer un élément sur l'axe X et Y (gauche a droite et haut en bas) */ 
+ /* transform: rotate(45deg); rotate permet d'effectuer une retation lui donnant un degrès */
+ /* transform: skew(26deg, 26deg); skew permet de faire une déformation en degrès sur X et Y, utile pour les effets 3D sur les animations */
+}
+

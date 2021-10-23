@@ -1,0 +1,74 @@
+.animation{
+  background: pink;
+  margin: 5em auto 15em auto;
+  width: 20em;
+  height: 20em;
+  border-radius: 50%;
+
+
+  animation-name: couleur; /* je donne un nom a mon animation */
+
+  animation-duration: 3s; /* j'indique qu'elle durera 3s */
+
+  animation-delay: 0.5s; /* donne un délais avant le lancement de l'animation */
+
+  animation-iteration-count: infinite; /* permet d'indiquer le nombre de fois ou l'animation va se lancer, ici elle ira 3x de 0% à 100% (voir keyframes)
+  Il est également possible d'indiquer le mot clé "infinite" afin que l'animation se répète en boucle */
+
+  animation-fill-mode: forwards; /* j'indique que je souhaite garder le style que possède mon élément a la fin de l'animation */
+
+  /* animation-play-state: paused; met l'animation en pause */
+
+  animation-timing-function: ease-out; /* même fonctionnement que pour les transitions */
+
+  animation-direction: alternate; /* La propriété animation-direction indique si les cycles de l'animation doivent être joués dans le sens inverse et/ou de 
+  façon alternée. Avec alternate, mon animation va de 0% a 100%, puis de 100% a 0%. */
+
+  /* 
+  animation: coulour 3s ease-in alternate infinite 1s;  reprends toutes les fonctionnalité du dessus en une seule ligne, elle reprends les propriétés suivante:
+
+  -animation-name
+  -animation-duration
+  -animation-timing-function
+  -animation-delay
+  -animation-iteration-count
+  -animation-direction
+  -animation-fill-mode
+  -animation-play-state
+  */
+}
+
+
+/* 
+  La règle @keyframes permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus
+  finement que ce qu'on pourrait obtenir avec les transitions.
+
+  voir : https://developer.mozilla.org/fr/docs/Web/CSS/@keyframes 
+*/
+@keyframes couleur {
+  0% {
+    background: pink;
+  }
+  25%{
+    background: lightsalmon;
+    width: 15em;
+    height: 15em
+  }
+  50%{
+    background: lightseagreen;
+    width: 10em;
+    height: 10em;
+  }
+  75%{
+    background: lightskyblue;
+    width: 5em;
+    height: 5em;
+  }
+  100%{
+    background: lightslategrey;
+    width: 0em;
+    height: 0em;
+  }
+}
+
+/* ici, a 0% mon background sera pink, 25% lightsalmon, 50% lightseagreen, 75% lightskyblue, 100% lightslategrey */

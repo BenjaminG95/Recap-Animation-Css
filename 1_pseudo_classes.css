@@ -1,0 +1,76 @@
+/* La pseudo-classe :hover permet de spécifier l'apparence d'un élément au moment où l'utilisateur le survole avec le pointeur, sans nécessairement l'activer.
+
+voir : https://developer.mozilla.org/fr/docs/Web/CSS/:hover */
+
+#hov:hover {
+  background: lightgreen;
+}
+
+/* La pseudo-classe :focus permet de cibler un élément lorsque celui-ci reçoit le focus (soit il est sélectionné à l'aide du clavier, soit il est activé avec la souris comme par exemple le champ d'un formulaire).
+
+voir : https://developer.mozilla.org/fr/docs/Web/CSS/:focus */
+
+#foc:focus{
+  background: lightblue
+}
+
+/* La pseudo-classe :active permet de cibler un élément lorsque celui-ci est activé par l'utilisateur. Elle permet de 
+fournir un feedback indiquant que l'activation a bien été détectée par le navigateur. Lorsqu'on a une interaction avec 
+un pointeur, il s'agit généralement du moment entre l'appui sur le pointeur et le relâchement de celui-ci.
+
+Voir : https://developer.mozilla.org/fr/docs/Web/CSS/:active */
+
+#act:active{
+  background: lightpink;
+}
+
+/*La pseudo-classe :nth-child(an+b) permet de cibler un élément qui possède an+b-1 éléments voisins (au même niveau) avant lui dans l'arbre du document pour
+ des valeurs entières n et qui possède un élément parent. Autrement dit, un sélecteur utilisant cette pseudo-classe permettra de cibler les éléments fils
+d'un élément dont les positions correspondent au motif an+b.
+
+voir : https://developer.mozilla.org/fr/docs/Web/CSS/:nth-child
+
+plus simplement: 
+
+1n séléctionnera tous les enfants
+2n séléctionnera le 2, 4, 6 , 8 etc.
+3n séléctionnera le 3, 6, 9, 12 etc.
+4n séléctionnera le 4, 8, 12, 16 etc.
+Etc...
+
+*/
+
+li:nth-child(3n+1) {
+  background: lightslategrey
+}
+
+
+
+/*Cibler les enfants impair avec odd ou 2n
+li:nth-child(odd) {
+  background: lightskyblue
+}
+
+
+Cibler les enfant pair  avec even ou 2n+1
+
+li:nth-child(even) {
+  background: lightskyblue
+}
+
+OU
+
+li:nth-child(2n+1) {
+  background: lightskyblue
+}
+
+Notez ici que le +'chiffre' définira l'enfant où commencera le ciblage
+donc 3n+1 selectionnera le 1, 4, 7, 10 etc
+     3n+2 selectionnera le 2, 5, 8, 11 etc
+     2n+4 selectionnera le 4, 6, 8, 10 etc
+
+li:nth-child(even) {
+  background: lightskyblue
+}
+
+*/

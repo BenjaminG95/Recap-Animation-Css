@@ -1,0 +1,30 @@
+.box {
+  height: 30em;
+  width: 30em;
+  margin: 5em auto 15em auto;
+  background: lightblue;
+
+  transition-property: background, transform; /* ici, j'informe les propriétés sur lesquels j'ai besoin d'appliquer une transition */ 
+
+  transition-duration: 0.5s; /* ici, je renseigne le temps que durera ma transition */
+  /* transition-delay: 1s;  ici, je renseigne le delais avant que ma transition se lance */
+
+  transition-timing-function: ease-in; /* Avec cette propriété, ma vitesse est rapide au début puis redevient à la normal vers la fin de la transition */
+
+  /* transition-timing-function: ease-out; /* Avec cette propriété, ma vitesse est normal au début puis devient rapide vers la fin de la transition */
+
+  /* transition-timing-function: cubic-bezier(.17,.67,.78,-0.06); cubic-bezier permet de creer ses propres courbes de vitesses, voir dans le devtool ou sur https://cubic-bezier.com/#.17,.67,.83,.67 */
+ 
+  /*transition: all 1s ease-in .2s;  ici, on regroupe tout ce qu'il y a plus haut en une seule ligne, dans l'ordre: 
+
+    -transition-property
+    -transition-duration
+    -transition-timing-function 
+    -transition-delay
+  */
+}
+
+.box:hover{
+  background: lightcoral;
+  transform: rotate(45deg);
+}

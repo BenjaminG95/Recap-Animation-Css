@@ -1,0 +1,101 @@
+/* ici nous retrouvons le codage lié a l'affiche "basique" */
+
+html{
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  padding-top: 1em;
+  font-weight: bold;
+  color: #D4ECDD;
+  text-align: center;
+  font-size: 3em;
+
+}
+
+h2,
+h3 {
+  color: #D4ECDD;
+}
+
+h2{
+  font-size: 2em;
+  margin-top: .5em;
+  margin-bottom: 2.5em;
+  text-align: center;
+}
+
+h3{
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.body {
+  background-color: #152D35;
+}
+
+hr {
+  background-color: white;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 1.5em;
+  margin-top: 2em;
+}
+
+.link {
+  color: #00A19D;
+  padding-bottom: 1.5em;
+}
+
+.link:hover {
+  color: #3ca1ff;
+}
+
+
+header {
+  background-color: #112031;
+}
+
+.card-body {
+  padding: 2em;
+  text-align: center;
+}
+
+.card {
+  background-color: #fff;
+  min-height: 3em;
+  width: 50%;
+  margin: .5em 2em .5em 2em;
+  border-radius: 1em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#foc {
+  display: block;
+  margin: 1em auto 0 auto;
+}
+
+.card-text{
+  font-weight: bold;
+}
+
+.marginTop{
+  margin-top: 5em;
+}
+
+.marginBot{
+  margin-bottom: 2em;
+}
